@@ -120,3 +120,23 @@ tests/             45 tests (guard, approval gate, MCP least-privilege, diagnost
 | Real LLM behaviour and accuracy numbers | **Not measured yet**: needs your `GOOGLE_API_KEY` and `eval.run_eval` |
 | Kafka / Postgres diagnostics against live services | Logic is unit-tested; **not run against a live broker/DB** |
 | OrderHub / TaskFlow (Java) | Written but **not compiled or run** yet; verify with `docker compose up --build` |
+
+## Verified Results
+
+The incident-response system was validated through automated testing and a live Kafka fault-injection demonstration.
+
+| Metric | Result |
+|---|---|
+| Automated tests | 45/45 passed |
+| Test execution time | 10.97 seconds |
+| Kafka consumer lag before remediation | 30 messages |
+| Kafka consumer lag after remediation | 0 messages |
+| Kafka lag reduction | 100% |
+| Human approval gate | Verified |
+| Remediation execution | Successful |
+| Consumer group status | Stable |
+
+The live demonstration used deterministic diagnostic logic and persistent human approval to execute guarded remediation without external LLM API calls.
+
+Live LLM-driven investigation and post-remediation session resumption remain pending validation due to external API rate limits.
+
