@@ -145,3 +145,22 @@ Live LLM-driven investigation and post-remediation session resumption remain pen
 
 ![Incident Response Dashboard](docs/dashboard.png)
 
+
+### Run the Interactive Dashboard
+
+Start the backend services:
+
+    docker compose up -d
+
+Install the dashboard dependency:
+
+    python -m pip install streamlit
+
+Launch the dashboard:
+
+    python -m streamlit run dashboard.py
+
+Open http://localhost:8501 in your browser.
+
+The dashboard provides live service monitoring, Kafka diagnostics, incident history and remediation results.
+
