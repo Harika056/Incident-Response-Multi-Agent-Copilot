@@ -117,6 +117,9 @@ def _gen_config() -> types.GenerateContentConfig:
 # ------------------------------------------------------------------------------ agents
 def build_specialists(settings: Settings, with_mcp: bool = True, model: Any = None):
     model = model or settings.model
+    if isinstance(model, str) and model.startswith("groq/"):
+        from google.adk.models.lite_llm import LiteLlm
+        model = LiteLlm(model=model)
     diag = "copilot.mcp_servers.orderhub_diag"
 
     def tools(names: list[str]) -> list:
@@ -219,6 +222,12 @@ def build_supervisor(
 ) -> LlmAgent:
     settings = settings or get_settings()
     model = model or settings.model
+    if isinstance(model, str) and model.startswith("groq/"):
+        from google.adk.models.lite_llm import LiteLlm
+        model = LiteLlm(model=model)
+    if isinstance(specialist_model, str) and specialist_model.startswith("groq/"):
+        from google.adk.models.lite_llm import LiteLlm
+        specialist_model = LiteLlm(model=specialist_model)
     logs, kafka, db, critic = build_specialists(settings, with_mcp=with_mcp, model=specialist_model or model)
 
     tools: list = [

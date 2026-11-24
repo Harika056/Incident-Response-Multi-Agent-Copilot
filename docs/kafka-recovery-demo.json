@@ -1,0 +1,31 @@
+﻿{
+  "incident": {
+    "id": "INC-576c05dd",
+    "created_at": 1795532513.4388735,
+    "alert": "Kafka lag - deterministic demonstration",
+    "session_id": "demo-5a0bb7e12ff74d25a49d2d3df30fa237",
+    "status": "awaiting_approval",
+    "root_cause": "KAFKA_CONSUMER_LAG",
+    "confidence": 0.9,
+    "evidence": [
+      "Kafka consumer lag: 30",
+      "Health HTTP status: 200",
+      "Long-running database queries: 0"
+    ],
+    "recommended_action": "resume_consumer",
+    "diagnosed_at": 1795532513.4556856
+  },
+  "proposals": [
+    {
+      "id": "PRP-f69030df",
+      "incident_id": "INC-576c05dd",
+      "action": "resume_consumer",
+      "rationale": "Observed Kafka consumer lag of 30 messages.",
+      "status": "executed",
+      "created_at": 1795532513.472721,
+      "decided_at": 1795532796.5436528,
+      "decided_by": "HP",
+      "result": "{\"action\":\"resume_consumer\",\"fixed\":true,\"fault\":\"NONE\"}"
+    }
+  ]
+}

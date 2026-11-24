@@ -1,0 +1,17 @@
+﻿.............................................                            [100%]
+============================== warnings summary ===============================
+tests/test_e2e_pause_resume.py: 44 warnings
+  C:\Users\HP\Downloads\incident-response\incident-response\.venv\Lib\site-packages\google\adk\utils\variant_utils.py:44: DeprecationWarning: GOOGLE_GENAI_USE_VERTEXAI is deprecated, please use GOOGLE_GENAI_USE_ENTERPRISE instead
+    if is_enterprise_mode_enabled():
+
+tests/test_e2e_pause_resume.py: 27 warnings
+  C:\Users\HP\Downloads\incident-response\incident-response\.venv\Lib\site-packages\google\adk\telemetry\tracing.py:1477: DeprecationWarning: GOOGLE_GENAI_USE_VERTEXAI is deprecated, please use GOOGLE_GENAI_USE_ENTERPRISE instead
+    if is_enterprise_mode_enabled()
+
+tests/test_e2e_pause_resume.py::test_pause_approve_resume_across_processes
+tests/test_e2e_pause_resume.py::test_pause_approve_resume_across_processes
+  C:\Users\HP\Downloads\incident-response\incident-response\.venv\Lib\site-packages\google\adk\runners.py:376: DeprecationWarning: The `plugins` argument is deprecated. Please use the `app` argument to provide plugins instead.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+45 passed, 73 warnings in 12.67s
