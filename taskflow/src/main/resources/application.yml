@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: taskflow
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+taskflow:
+  jwt:
+    # HS256 shared secret (>= 32 bytes). Dev default only; override with TASKFLOW_JWT_SECRET.
+    secret: ${TASKFLOW_JWT_SECRET:dev-only-secret-change-me-32-bytes-min!!}
