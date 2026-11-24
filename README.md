@@ -140,3 +140,8 @@ The live demonstration used deterministic diagnostic logic and persistent human 
 
 Live LLM-driven investigation and post-remediation session resumption remain pending validation due to external API rate limits.
 
+
+## Interactive Dashboard
+
+![Incident Response Dashboard](docs/dashboard.png)
+
